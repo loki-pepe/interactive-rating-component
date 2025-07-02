@@ -38,28 +38,48 @@
     --submit-background-hover: var(--white);
     --submit-color: var(--grey-950);
 
+    /* Font family */
+    --overpass: "Overpass", Tahoma, sans-serif;
+
     /* Font sizes */
-    --heading: clamp(1.5rem, 1.0178vw + 1.2615rem, 1.75rem);
-    --body: clamp(.875rem, .2375vw + .8193rem, .9333rem);
-    --radio-button: clamp(.875rem, .5089vw + .7557rem, 1rem);
-    --submit: 0.875rem;
+    --heading-font-size: clamp(1.5rem, 1.0178vw + 1.2615rem, 1.75rem);
+    --body-font-size: clamp(.875rem, .2375vw + .8193rem, .9333rem);
+    --radio-button-font-size: clamp(.875rem, .5089vw + .7557rem, 1rem);
+    --submit-font-size: 0.875rem;
     
     /* Font weights */
     --regular: 400;
     --semi-bold: 600;
     --bold: 700;
 
+    --heading-font-weight: var(--bold);
+    --body-font-weight: var(--regular);
+    --radio-button-font-weight: var(--bold);
+    --submit-font-weight: var(--bold);
+
     /* Line heights */
     --heading-line-height: 1.25;
     --body-line-heigth: 1.6;
     --radio-button-line-height: clamp(1.125rem, 1.5267vw + .7672rem, 1.5rem);
-    --submit-line-height: clamp(1.125rem, 1.5267vw + .7672rem, 1.5rem);
+    --submit-line-height: 1.2857143;
 
     /* Letter spacings */
     --heading-letter-spacing: 0;
     --body-letter-spacing: 0;
     --radio-button-letter-spacing: clamp(.0125rem, -.4249vw + .2165rem, .1169rem);
     --submit-letter-spacing: clamp(.0106rem, -.4326vw + .2183rem, .1169rem);
+}
+
+@media (min-width: 768px) {
+
+:root {
+    /* Line heights */
+    --submit-line-height: 1.7142857;
+
+    /* Font weights */
+    --submit-font-weight: var(--semi-bold);
+}
+
 }
 
 *, *::before, *::after {
@@ -75,17 +95,23 @@ body {
     min-height: 100vh;
     background: var(--background);
     color: var(--body-color);
+    font-family: var(--overpass);
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-heigth);
+    letter-spacing: var(--body-letter-spacing);
 }
 
 button {
     display: block;
-    font-size: inherit;
     font-family: inherit;
+    font-size: var(--submit-font-size);
+    font-weight: var(--submit-font-weight);
+    line-height: var(--submit-line-height);
+    letter-spacing: var(--submit-letter-spacing);
     background: var(--submit-background);
     color: var(--submit-color);
 }
-
-
 
 fieldset {
     border: none;
@@ -93,6 +119,10 @@ fieldset {
 
 h1 {
     color: var(--heading-color);
+    font-size: var(--heading-font-size);
+    line-height: var(--heading-line-height);
+    letter-spacing: var(--heading-letter-spacing);
+    font-weight: var(--heading-font-weight);
 }
 
 [hidden] {
@@ -113,6 +143,10 @@ input {
 label {
     background: var(--radio-button-background);
     color: var(--radio-button-color);
+    font-size: var(--radio-button-font-size);
+    font-weight: var(--radio-button-font-weight);
+    line-height: var(--radio-button-line-height);
+    letter-spacing: var(--radio-button-letter-spacing);
 }
 
 input[type="radio"]:checked + label {
