@@ -22,6 +22,29 @@
     --orange: hsl(25 97% 53%);
 
     --gradient: linear-gradient(hsl(215 20% 17%), hsl(216 24% 12%));
+
+    /* Font sizes */
+    --heading: clamp(1.5rem, 1.0178vw + 1.2615rem, 1.75rem);
+    --body: clamp(.875rem, .2375vw + .8193rem, .9333rem);
+    --radio-button: clamp(.875rem, .5089vw + .7557rem, 1rem);
+    --submit: 0.875rem;
+    
+    /* Font weights */
+    --regular: 400;
+    --semi-bold: 600;
+    --bold: 700;
+
+    /* Line heights */
+    --heading-line-height: 1.25;
+    --body-line-heigth: 1.6;
+    --radio-button-line-height: clamp(1.125rem, 1.5267vw + .7672rem, 1.5rem);
+    --submit-line-height: clamp(1.125rem, 1.5267vw + .7672rem, 1.5rem);
+
+    /* Letter spacings */
+    --heading-letter-spacing: 0;
+    --body-letter-spacing: 0;
+    --radio-button-letter-spacing: clamp(.0125rem, -.4249vw + .2165rem, .1169rem);
+    --submit-letter-spacing: clamp(.0106rem, -.4326vw + .2183rem, .1169rem);
 }
 
 *, *::before, *::after {
