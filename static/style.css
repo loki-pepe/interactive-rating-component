@@ -10,6 +10,20 @@
     font-style: italic;
 }
 
+:root {
+    /* Colors */
+    --white: hsl(0 100% 100%);
+    --black: hsl(0 0% 0%);
+
+    --grey-950: hsl(216 12% 8%);
+    --grey-900: hsl(213 19% 18%);
+    --grey-500: hsl(217 12% 63%);
+
+    --orange: hsl(25 97% 53%);
+
+    --gradient: linear-gradient(hsl(215 20% 17%), hsl(216 24% 12%));
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
