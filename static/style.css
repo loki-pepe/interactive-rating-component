@@ -140,6 +140,10 @@ input {
     color: inherit;
 }
 
+input[type="radio"] {
+    appearance: none;
+}
+
 label {
     background: var(--radio-button-background);
     color: var(--radio-button-color);
