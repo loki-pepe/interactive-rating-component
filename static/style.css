@@ -74,6 +74,10 @@
     --body-letter-spacing: 0;
     --submit-letter-spacing: clamp(.0106rem, -.4326vw + .2183rem, .1169rem);
 
+    /* Margins */
+    --main-margin-large: clamp(24px, 2.0356vw + 16.3664px, 32px);
+    --main-margin-small: 16px;
+
     /* Paddings*/
     --body-padding: 24px;
     --rating-card-padding-block: clamp(24px, 2.0356vw + 16.3664px, 32px);
@@ -135,6 +139,7 @@ button {
     width: 100%;
     border: none;
     padding-block: var(--submit-padding-block);
+    margin-block-start: var(--main-margin-large);
     border-radius: var(--submit-border-radius);
     text-transform: uppercase;
 }
@@ -195,6 +200,10 @@ input[type="radio"]:checked + label {
     color: var(--radio-button-color-checked);
 }
 
+legend {
+    margin-block: var(--main-margin-small);
+}
+
 main {
     background: var(--main-background);
     min-width: var(--main-min-width);
@@ -207,6 +216,7 @@ main {
     width: var(--star-icon-container-size);
     background: url("../images/icon-star.svg") center/var(--star-icon-size) no-repeat, var(--star-icon-container-color);
     border-radius: var(--star-icon-container-radius);
+    margin-block-end: var(--main-margin-large);
 }
 
 
