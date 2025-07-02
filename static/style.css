@@ -12,6 +12,7 @@
 
 :root {
     /* Border radius */
+    --main-border-radius: clamp(15px, 3.8168vw + .687px, 30px);
     --radio-button-border-radius: 50%;
     --submit-border-radius: 22.5px;
 
@@ -72,9 +73,12 @@
     --submit-letter-spacing: clamp(.0106rem, -.4326vw + .2183rem, .1169rem);
 
     /* Paddings*/
+    --body-padding: 24px;
     --submit-padding-block: 15px;
 
     /* Sizing */
+    --main-max-width: 25.75rem;
+    --main-min-width: 320px;
     --radio-button-size: clamp(2.625rem, 2.2901vw + 2.0883rem, 3.1875rem);
 }
 
@@ -97,6 +101,10 @@
 }
 
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--body-padding);
     min-height: 100vh;
     background: var(--background);
     color: var(--body-color);
@@ -174,6 +182,9 @@ input[type="radio"]:checked + label {
 
 main {
     background: var(--main-background);
+    min-width: var(--main-min-width);
+    flex: 0 1 var(--main-max-width);
+    border-radius: var(--main-border-radius);
 }
 
 @media (hover: hover) {
