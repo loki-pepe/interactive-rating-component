@@ -179,7 +179,7 @@ input {
 }
 
 input[type="radio"] {
-    appearance: none;
+    display: none;
 }
 
 label {
