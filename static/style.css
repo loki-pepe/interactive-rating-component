@@ -74,7 +74,11 @@
 
     /* Paddings*/
     --body-padding: 24px;
+    --rating-card-padding-block: clamp(24px, 2.0356vw + 16.3664px, 32px);
+    --rating-card-padding-inline: 24px;
     --submit-padding-block: 15px;
+    --thank-you-card-padding-block: clamp(32px, 2.0356vw + 24.3664px, 40px);
+    --thank-you-card-padding-inline: clamp(24px, 2.0356vw + 16.3664px, 32px);
 
     /* Sizing */
     --main-max-width: 25.75rem;
@@ -124,11 +128,18 @@ button {
     letter-spacing: var(--submit-letter-spacing);
     background: var(--submit-background);
     color: var(--submit-color);
-    width: 100%; /* Privremeno? */
+    width: 100%;
     border: none;
     padding-block: var(--submit-padding-block);
     border-radius: var(--submit-border-radius);
     text-transform: uppercase;
+}
+
+.card#rating {
+    padding: var(--rating-card-padding-block) var(--rating-card-padding-inline);
+}
+.card#thank-you {
+    padding: var(--thank-you-card-padding-block) var(--thank-you-card-padding-inline);
 }
 
 fieldset {
