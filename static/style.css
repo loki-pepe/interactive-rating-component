@@ -13,6 +13,7 @@
 :root {
     /* Border radius */
     --radio-button-border-radius: 50%;
+    --submit-border-radius: 22.5px;
 
     /* Colors */
     --white: hsl(0 100% 100%);
@@ -63,26 +64,23 @@
     /* Line heights */
     --heading-line-height: 1.25;
     --body-line-heigth: 1.6;
-    --radio-button-line-height: clamp(1.125rem, 1.5267vw + .7672rem, 1.5rem);
-    --submit-line-height: 1.2857143;
+    --submit-line-height: 1.071428571428571;
 
     /* Letter spacings */
     --heading-letter-spacing: 0;
     --body-letter-spacing: 0;
-    --radio-button-letter-spacing: clamp(.0125rem, -.4249vw + .2165rem, .1169rem);
     --submit-letter-spacing: clamp(.0106rem, -.4326vw + .2183rem, .1169rem);
 
     /* Paddings*/
-    --radio-button-padding-block: clamp(8px, 2.0356vw + .3664px, 16px);
-    --radio-button-padding-inline: clamp(16px, 2.0356vw + 8.3664px, 24px);
+    --submit-padding-block: 15px;
+
+    /* Sizing */
+    --radio-button-size: clamp(2.625rem, 2.2901vw + 2.0883rem, 3.1875rem);
 }
 
 @media (min-width: 768px) {
 
 :root {
-    /* Line heights */
-    --submit-line-height: 1.7142857;
-
     /* Font weights */
     --submit-font-weight: var(--semi-bold);
 }
@@ -118,6 +116,11 @@ button {
     letter-spacing: var(--submit-letter-spacing);
     background: var(--submit-background);
     color: var(--submit-color);
+    width: 100%; /* Privremeno? */
+    border: none;
+    padding-block: var(--submit-padding-block);
+    border-radius: var(--submit-border-radius);
+    text-transform: uppercase;
 }
 
 fieldset {
@@ -152,15 +155,15 @@ input[type="radio"] {
 }
 
 label {
-    display: block;
-    width: max-content; /* Privremeno? */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--radio-button-size);
+    height: var(--radio-button-size);
     background: var(--radio-button-background);
     color: var(--radio-button-color);
     font-size: var(--radio-button-font-size);
     font-weight: var(--radio-button-font-weight);
-    line-height: var(--radio-button-line-height);
-    letter-spacing: var(--radio-button-letter-spacing);
-    padding: var(--radio-button-padding-block) var(--radio-button-padding-inline);
     border-radius: var(--radio-button-border-radius);
 }
 
