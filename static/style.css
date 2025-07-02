@@ -11,6 +11,9 @@
 }
 
 :root {
+    /* Border radius */
+    --radio-button-border-radius: 50%;
+
     /* Colors */
     --white: hsl(0 100% 100%);
     --black: hsl(0 0% 0%);
@@ -68,6 +71,10 @@
     --body-letter-spacing: 0;
     --radio-button-letter-spacing: clamp(.0125rem, -.4249vw + .2165rem, .1169rem);
     --submit-letter-spacing: clamp(.0106rem, -.4326vw + .2183rem, .1169rem);
+
+    /* Paddings*/
+    --radio-button-padding-block: clamp(8px, 2.0356vw + .3664px, 16px);
+    --radio-button-padding-inline: clamp(16px, 2.0356vw + 8.3664px, 24px);
 }
 
 @media (min-width: 768px) {
@@ -145,12 +152,16 @@ input[type="radio"] {
 }
 
 label {
+    display: block;
+    width: max-content; /* Privremeno? */
     background: var(--radio-button-background);
     color: var(--radio-button-color);
     font-size: var(--radio-button-font-size);
     font-weight: var(--radio-button-font-weight);
     line-height: var(--radio-button-line-height);
     letter-spacing: var(--radio-button-letter-spacing);
+    padding: var(--radio-button-padding-block) var(--radio-button-padding-inline);
+    border-radius: var(--radio-button-border-radius);
 }
 
 input[type="radio"]:checked + label {
