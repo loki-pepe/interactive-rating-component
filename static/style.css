@@ -14,6 +14,7 @@
     /* Border radius */
     --main-border-radius: clamp(15px, 3.8168vw + .687px, 30px);
     --radio-button-border-radius: 50%;
+    --star-icon-container-radius: 50%;
     --submit-border-radius: 22.5px;
 
     /* Colors */
@@ -39,6 +40,7 @@
     --radio-button-color: var(--grey-500);
     --radio-button-color-checked: var(--grey-900);
     --radio-button-color-hover: var(--grey-900);
+    --star-icon-container-color: var(--grey-900);
     --submit-background: var(--orange);
     --submit-background-hover: var(--white);
     --submit-color: var(--grey-950);
@@ -83,6 +85,8 @@
     /* Sizing */
     --main-max-width: 25.75rem;
     --main-min-width: 320px;
+    --star-icon-size: clamp(13.96px, .7099vw + 11.2978px, 16.75px);
+    --star-icon-container-size: clamp(40px, 2.0356vw + 32.3664px, 48px);
     --radio-button-size: clamp(2.625rem, 2.2901vw + 2.0883rem, 3.1875rem);
 }
 
@@ -197,6 +201,14 @@ main {
     flex: 0 1 var(--main-max-width);
     border-radius: var(--main-border-radius);
 }
+
+#rating .icon-container {
+    height: var(--star-icon-container-size);
+    width: var(--star-icon-container-size);
+    background: url("../images/icon-star.svg") center/var(--star-icon-size) no-repeat, var(--star-icon-container-color);
+    border-radius: var(--star-icon-container-radius);
+}
+
 
 @media (hover: hover) {
     button:hover {
