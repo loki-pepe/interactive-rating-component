@@ -219,6 +219,11 @@ main {
     margin-block-end: var(--main-margin-large);
 }
 
+#rating-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media (hover: hover) {
     button:hover {
