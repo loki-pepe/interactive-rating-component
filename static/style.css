@@ -80,11 +80,11 @@
 
     /* Paddings*/
     --body-padding: 24px;
-    --rating-card-padding-block: clamp(24px, 2.0356vw + 16.3664px, 32px);
-    --rating-card-padding-inline: 24px;
+    --rating-card-padding-block: clamp(24px, 2.6718vw + 13.9809px, 34.5px);
+    --rating-card-padding-inline: clamp(24px, 1.6539vw + 17.7977px, 30.5px);
     --submit-padding-block: 15px;
-    --thank-you-card-padding-block: clamp(32px, 2.0356vw + 24.3664px, 40px);
-    --thank-you-card-padding-inline: clamp(24px, 2.0356vw + 16.3664px, 32px);
+    --thanks-card-padding-block: clamp(32px, 3.1807vw + 20.0725px, 44.5px);
+    --thanks-card-padding-inline: clamp(24px, 3.0534vw + 12.5496px, 36px);
 
     /* Sizing */
     --main-max-width: 25.75rem;
@@ -147,8 +147,8 @@ button {
 .card#rating {
     padding: var(--rating-card-padding-block) var(--rating-card-padding-inline);
 }
-.card#thank-you {
-    padding: var(--thank-you-card-padding-block) var(--thank-you-card-padding-inline);
+.card#thanks {
+    padding: var(--thanks-card-padding-block) var(--thanks-card-padding-inline);
 }
 
 fieldset {
