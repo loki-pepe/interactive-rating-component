@@ -165,10 +165,12 @@ main {
 @media (hover: hover) {
     button:hover {
         background: var(--submit-background-hover);
+        cursor: pointer;
     }
 
     label:hover {
         background: var(--radio-button-background-hover);
         color: var(--radio-button-color-hover);
+        cursor: pointer;
     }
 }
