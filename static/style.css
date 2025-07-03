@@ -12,10 +12,14 @@
 
 :root {
     /* Border radius */
+    --circle-border-radius: 50%;
+    --button-border-radius: 22.5px;
+
     --main-border-radius: clamp(15px, 3.8168vw + .687px, 30px);
-    --radio-button-border-radius: 50%;
-    --star-icon-container-radius: 50%;
-    --submit-border-radius: 22.5px;
+    --radio-button-border-radius: var(--circle-border-radius);
+    --result-p-border-radius: var(--button-border-radius);
+    --star-icon-container-radius: var(--circle-border-radius);
+    --submit-border-radius: var(--button-border-radius);
 
     /* Colors */
     --white: hsl(0 100% 100%);
@@ -40,6 +44,8 @@
     --radio-button-color: var(--grey-500);
     --radio-button-color-checked: var(--grey-900);
     --radio-button-color-hover: var(--grey-900);
+    --result-p-background: var(--grey-900);
+    --result-p-color: var(--orange);
     --star-icon-container-color: var(--grey-900);
     --submit-background: var(--orange);
     --submit-background-hover: var(--white);
@@ -82,6 +88,8 @@
     --body-padding: 24px;
     --rating-card-padding-block: clamp(24px, 2.6718vw + 13.9809px, 34.5px);
     --rating-card-padding-inline: clamp(24px, 1.6539vw + 17.7977px, 30.5px);
+    --result-p-padding-block: calc((32px - var(--body-font-size) * var(--body-line-heigth)) / 2);
+    --result-p-padding-inline: clamp(12px, 1.9084vw + 4.8435px, 19.5px);
     --submit-padding-block: 15px;
     --thanks-card-padding-block: clamp(32px, 3.1807vw + 20.0725px, 44.5px);
     --thanks-card-padding-inline: clamp(24px, 3.0534vw + 12.5496px, 36px);
@@ -89,9 +97,11 @@
     /* Sizing */
     --main-max-width: 25.75rem;
     --main-min-width: 320px;
+    --radio-button-size: clamp(2.625rem, 2.2901vw + 2.0883rem, 3.1875rem);
+    --result-p-height: 2rem;
     --star-icon-size: clamp(13.96px, .7099vw + 11.2978px, 16.75px);
     --star-icon-container-size: clamp(40px, 2.0356vw + 32.3664px, 48px);
-    --radio-button-size: clamp(2.625rem, 2.2901vw + 2.0883rem, 3.1875rem);
+    --thanks-illustration-container-height: clamp(96px, 3.0534vw + 84.5496px, 108px);
 }
 
 @media (min-width: 768px) {
@@ -148,7 +158,12 @@ button {
     padding: var(--rating-card-padding-block) var(--rating-card-padding-inline);
 }
 .card#thanks {
+    text-align: center;
+    gap: var(--main-margin-large);
     padding: var(--thanks-card-padding-block) var(--thanks-card-padding-inline);
+}
+.card#thanks > div {
+    text-align: center;
 }
 
 fieldset {
@@ -211,6 +226,27 @@ main {
     border-radius: var(--main-border-radius);
 }
 
+p {
+    margin-block-start: var(--main-margin-small);
+}
+
+#result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: var(--main-margin-large);
+}
+
+p#result {
+    color: var(--result-p-color);
+    background: var(--result-p-background);
+    padding-block: var(--result-p-padding-block);
+    padding-inline: var(--result-p-padding-inline);
+    border-radius: var(--result-p-border-radius);
+    margin: 0;
+}
+
+
 #rating .icon-container {
     height: var(--star-icon-container-size);
     width: var(--star-icon-container-size);
@@ -222,6 +258,12 @@ main {
 #rating-buttons {
     display: flex;
     justify-content: space-between;
+}
+
+#thanks .icon-container {
+    height: var(--thanks-illustration-container-height);
+    width: 100%;
+    background: url("../images/illustration-thank-you.svg") center/contain no-repeat;
 }
 
 
