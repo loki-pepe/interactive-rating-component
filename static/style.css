@@ -194,7 +194,10 @@ input {
 }
 
 input[type="radio"] {
-    display: none;
+    appearance: none;
+}
+input[type="radio"]:focus-visible {
+    outline: none;
 }
 
 label {
@@ -210,9 +213,15 @@ label {
     border-radius: var(--radio-button-border-radius);
 }
 
-input[type="radio"]:checked + label {
+label:has(input[type="radio"]:checked) {
     background: var(--radio-button-background-checked);
     color: var(--radio-button-color-checked);
+}
+
+label:has(input[type="radio"]:focus-visible) {
+    outline: 5px solid var(--orange);
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 legend {
