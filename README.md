@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/loki-pepe/interactive-rating-componen)
-- [Live Site URL](https://loki-pepe.github.io/interactive-rating-componen/)
+- [Solution URL](https://github.com/loki-pepe/interactive-rating-component)
+- [Live Site URL](https://loki-pepe.github.io/interactive-rating-component/)
 
 ## My process
 
